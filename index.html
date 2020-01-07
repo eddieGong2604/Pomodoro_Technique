@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pomodoro Technique</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css\all.css">
+	<link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="css\bootstrap.css">
+
+	<link rel="shortcut icon" type="image/x-icon" href="img\tomatoLoader.png" />
+
+	<link rel="stylesheet" type="text/css" href="css\style.css">
+
+	<script type="text/javascript" src="js\jquery.js"></script>
+
+	<script type="text/javascript" src="js\bootstrap.js"></script>
+	<script type="text/javascript" src="js\script.js"></script>
+</head>
+
+<body>
+	<!-- Preloader -->
+	<div class="tom-container">
+		<div class="tom-loader">
+			<img src="img\tomatoLoader.png">
+			<img src="img\tomatoLoader.png">
+			<img src="img\tomatoLoader.png">
+			<img src="img\tomatoLoader.png">
+		</div>
+	</div>
+
+	<!-- Background video-->
+	
+	<!--Home -->
+	<div id="home">
+		<video autoplay muted loop id="background-video" poster="video\tomato-bg.png">
+			<source src="video\appvid.mp4" type="video/mp4">
+		</video>
+
+		<div class="home-overlay"></div>
+		<div class="navbar topnav" id="myTopnav">
+				<div class="navIcon">
+				  <a href="" class="" >
+				    <img src="img\tom-icon.png" width="30" height="30" class="d-inline-block align-top" alt=""><span>Pomodoro</span> 
+				  </a>
+				</div>
+
+
+				<div class="pom-guide">
+					<a class="" href="https://en.wikipedia.org/wiki/Pomodoro_Technique"><i class="fas fa-angle-left"></i> Overview&nbsp;</a>&nbsp;&nbsp;&nbsp;
+					<a class="" href="https://www.developgoodhabits.com/pomodoro-technique/"><i class="fas fa-angle-left"></i> Instruction&nbsp;</a>
+				</div>
+				
+				 <button class="icon" class="dropbtn" onclick="hamburgerExpansion()">
+    				<i id="arrow" class="fas fa-angle-down" onclick="iconChange(this)"  style="color: white; font-size:20px;"></i>
+  				</button>
+
+  				<div class="dropdown hidden" >
+  						<a href="#" style="color: white; font-size: 20px;">Overview</a>
+  						<br>
+  						<a href="#" style="color: white; font-size:20px;">Instruction</a>
+  				</div>
+		</div>
+		<div class="home-content">
+			
+			<div class="inner-content-container text-center">
+				<div style="margin-left:auto;margin-right:auto;">
+					<div class="inner-content-header">
+						<h1>POMODORO <SPAN>TECHNIQUE</SPAN></h1><br>
+					</div>
+					<div class="inner-content-para">
+						<p>A technique developed by abcxyz, proven to results in higher work efficiency<br> and used by millions of students/adults across the globe</p>
+					</div>
+					<div class="inner-content-button">
+						<a href="app.html" class="start-button-pom">Start Pomodoro&nbsp;</a>
+					</div><br>
+					<div class="inner-content-para">
+						<p>New to Pomodoro?</p>
+					</div>
+					<div class="inner-content-button">
+						<a href="https://www.youtube.com/watch?v=VFW3Ld7JO0w" class="watch-button-pom">Watch a short tutorial&nbsp;</a>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+					
+	
+	
+</body>
+</html>

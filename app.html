@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pomodoro Technique</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="css\all.css">
+	<link href="https://fonts.googleapis.com/css?family=Caveat&display=swap" rel="stylesheet">
+	
+	<link rel="stylesheet" href="css\bootstrap.css">
+
+	<link rel="shortcut icon" type="image/x-icon" href="img\tomatoLoader.png" />
+
+	<link rel="stylesheet" type="text/css" href="css\style2.css">
+
+	<script type="text/javascript" src="js\jquery.js"></script>
+
+	<script type="text/javascript" src="js\bootstrap.js"></script>
+	<script type="text/javascript" src="js\script2.js"></script>
+</head>
+<body>
+	<!-- Preloader -->
+	<div class="tom-container">
+		<div class="tom-loader">
+			<img src="img\tomatoLoader.png">
+			<img src="img\tomatoLoader.png">
+			<img src="img\tomatoLoader.png">
+			<img src="img\tomatoLoader.png">
+		</div>
+	</div>
+
+	<!-- Main app -->
+	<div id="main-page">
+		<video autoplay muted loop id="background-video">
+			<source src="video\appvid.mp4" type="video/mp4">
+		</video>
+
+		<div class ="home-overlay"></div>
+
+
+		<nav class="navbar">
+  			<a class="navbar-brand" href="index.html">
+  		 	<img src="img\tom-icon-2.png" width="25" height="30" class="d-inline-block align-top" alt="">
+    Pomodoro
+ 			</a>
+			<div class="list-of-options">
+				<i class="far fa-bell"></i>
+			</div>
+		</nav>
+		
+		<div id="home">
+		<div id="home-content-wrapper" class="row" style="margin-left:auto;margin-right:auto;">
+			<div  class="col">
+				
+				<div id="time-modification" class="hidden">
+
+					<ul>
+
+				<div id="pop-up" class="hidden">
+					<div>
+						<button onclick="applyCustomization()">Confirm</button>
+				<button onclick="noPopUp()">Cancel</button>
+					</div>
+				
+				</div>
+						Customize your pomodoro
+
+
+					  <li>Main Time:&nbsp;&nbsp; <input id="main-time-left" type="text" size="2px"> min</li>
+					  <li>Short Break: <input id="short-break-left" type="text" size="2px"> min</li>
+					  <li>Long Break: &nbsp;&nbsp;<input id="long-break-left" type="text" size="2px"> min</li>
+					  <br>
+					  <button id="apply-customization" onclick="popUp()">Apply</button>
+					</ul>
+
+
+
+
+
+				
+				</div>
+
+			</div>
+			<div id="main-pomodoro" class="col-6">
+				
+				<div id="in-progress" class="hidden"><h1 style="font-weight: 700;" id="status">Main Time</h1><p>----------</p>
+					
+  
+						  <div class="range-slider">
+						
+
+						    <input oninput="changeTimeWithSlider()" class="rs-range" id="clock-slider" type="range" value="0" min="0" max="100">
+						    
+						  </div>
+						  <br>
+						
+
+				
+					
+
+
+					<h2 id="middle-counter">
+						
+					</h2>
+					<button id="left-button" class="play">Play</button><button id="right-button">Reset</button>
+					<p style="font-size: 25px;"><span id="number-of-pom" style="font-weight: 700;"> 0 </span> Pomodoro used for <span id="task-name-counting">this task</span></p>
+					<button id="finish" onclick="finishTheApp()">Finish</button>
+				</div>
+				
+				<div id="starter" class="show">
+				<h1>Set up your<span style="color:red;"> Pomodoro</span> clock</h1>
+				<div><table>
+				<tr><td><span>Task name: </span></td><td>
+
+
+
+
+					<div class="input-group mr-sm-2">
+  <input type="text" class="form-control" id="task-name" placeholder="E.g: Programming" aria-label="Username" aria-describedby="basic-addon1">
+
+  <img src="img\denied.png" id="denied" class="hidden" style="color: red;background:white;position: absolute;right: -29px;top: 25%;border-radius: 50%;">
+</div>
+
+
+
+
+</td></tr>
+				<tr><td><span>Main time: </span></td><td>
+	
+	
+		<select  id="main-time" class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+					<option value="10">10 minutes</option>
+					<option value="15">15 minutes</option>
+					<option value="20">20 minutes</option>
+					<option value="25" selected>25 minutes</option>
+				</select>
+	
+				
+				
+
+				 </td></tr>
+				<tr><td><span>Long break: </span></td><td><select id="long-time"  class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+					<option value="5"> 5 minutes</option>
+					<option value="10"  selected> 10 minutes</option>
+					<option value="15"> 15 minutes</option>
+				</select> </td></tr>
+				<tr><td><span>Short break: </span></td><td><select id="short-time"  class="custom-select mr-sm-2" id="inlineFormCustomSelect">
+					<option value="2"> 2 minutes</option>
+					<option value="3"> 3 minutes</option>
+					<option value="5" selected> 5 minutes</option>
+				</select></td></tr>
+				<tr><td>Notification:</td><td style="text-align: center;">
+					<label class="switch">
+  					<input id="notification-google" type="checkbox">
+  					<span class="slider round"></span>
+					</label>
+
+				</td></tr>
+				<tr><td colspan="2"><button class="start-button-pom" onclick="startTheApp()">Start</button></td></tr>
+				</table></div>
+
+			</div>
+		
+
+
+
+
+			</div>
+			<div  class="col">
+				<div id="concentration-aid" class="hidden">
+
+					<ul>
+						Main Time Tips
+					  <li>Intensive focus in the main period.</li>
+					  <li>Avoid external distraction. <a style="color: white;" href="https://chrome.google.com/webstore/detail/block-facebook/gebclbfnlcebcljmgblacllmjkfidoef">Facebook Blocker</a>.</li>
+					  <li>(Optional) Play your favourite study music at the same level as mosquito buzz.</li>
+					</ul>
+
+
+
+
+				</div>
+				
+			</div>
+				
+<div id="pop-up-finish" class="hidden">
+	<h1>Summary</h1>
+					 <span  style="font-size: 25px;">Number of Pomodoro used: </span><span style="font-size: 25px;" id="number-of-pom-finish"></span> <br>
+					 <span  style="font-size: 25px;">Total time for the task: </span><span  style="font-size: 25px;" id="time-finish"></span>  <span  style="font-size: 25px;"> seconds</span><br>
+					<br>
+
+					<button style="background-color: red;
+  color: white; border: transparent;" ><a style="color: white;" href="index.html">Back to homepage</a> </button>
+					<button style="background-color:white ;
+  color: red; border: transparent;"><a style="color: red;" href="app.html">Restart</a>  </button>
+					
+				</div>
+		</div>
+<!-- end of div-->
+</div>
+	</div>
+
+
+	
+
+</body>
+</html>
