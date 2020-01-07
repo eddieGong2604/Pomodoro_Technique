@@ -8,3 +8,5 @@
 3. Work on the task
 4. Pause your work when the timer rings and have a Short Break
 5. After four pomodoros, take a longer break (15–30 minutes)
+
+*[Project Preview]*(https://eddiegong2604.github.io/Pomodoro_Technique/index.html)
