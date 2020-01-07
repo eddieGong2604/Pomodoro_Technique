@@ -1,0 +1,288 @@
+/*grey: #FCFFF7
+red: #EE3322*/
+
+.text-center{
+  text-align: center;
+}
+html,body{
+  height: 100%;
+  width: 100%;
+}
+body{
+	font-family: 'Caveat', cursive;
+  color:white;
+}
+section {
+    background: #fff;
+    overflow: hidden;
+}
+p{
+  line-height: 25px;
+}
+/*Preloader*/
+
+
+
+.tom-container{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height:100%;
+	overflow: hidden;
+	z-index: 99;
+	background-color: white;
+}
+  .tom-loader {
+ 
+  display: inline-block;
+  position: fixed;
+  top:50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  width: 80px;
+  height: 80px;
+}
+.tom-loader img {
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  
+  background: transparent;
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+.tom-loader img:nth-child(1) {
+  left: 0px;
+  animation: lds-ellipsis1 0.6s infinite;
+}
+.tom-loader img:nth-child(2) {
+  left: 0px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.tom-loader img:nth-child(3) {
+  left: 38px;
+  animation: lds-ellipsis2 0.6s infinite;
+}
+.tom-loader img:nth-child(4) {
+  left: 76px;
+  animation: lds-ellipsis3 0.6s infinite;
+}
+@keyframes lds-ellipsis1 {
+  0% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes lds-ellipsis3 {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
+@keyframes lds-ellipsis2 {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(38px, 0);
+  }
+}
+
+/*Background video*/
+#background-video{
+  position: fixed;
+  top:50%; 
+  left:50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%; 
+  min-height: 100%; 
+  width: auto; 
+  height: auto;
+  z-index: -55; 
+  background-size: cover;
+
+}
+
+@media (min-aspect-ratio: 16/9){
+	#background-video{
+		width: 100%;
+		height:auto%;
+	}
+}
+
+@media (max-aspect-ratio: 16/9){
+	#background-video{
+		width: auto;
+		height:100%;
+	}
+}
+
+/*home content*/
+#home{
+    background: none;
+    height: 100%;
+}
+
+.home-overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    z-index: -54;
+}
+
+/*icon*/
+.home-content{
+  width: 100%;
+  height: 100%;
+  display: table;
+
+
+}
+#nav{
+  position: fixed;
+  width: 100%;
+  display: table-row;
+}
+.navbar{
+  position: absolute;
+  width: 100%;
+}
+.navbar a span{
+	color:white !important;
+	font-size:25px;
+	font-weight: 700;
+
+}
+.navIcon{
+  display: inline-block;
+}
+.navIcon a:hover{
+	text-decoration: none;
+}
+.pom-guide{
+	float: right;
+	font-size:25px;
+}
+.pom-guide a{
+	background-color: transparent;
+	color: white;
+	border: none;
+	transition: 0.15s;
+	border-radius: 0.25rem;
+	display: inline-block;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, font-size 0.5s ease-in-out;
+}
+.pom-guide a:hover{
+	display: inline-block;
+  background-color: red;
+  border: 0px solid transparent;
+  border-radius: 0.25rem;
+  transition: color 0.5s ease-in-out, background-color 0.5s ease-in-out, border-color 0.5s ease-in-out, box-shadow 0.5s ease-in-out, font-size 0.5s ease-in-out;
+  text-decoration: none;
+}
+
+.pom-guide a i{
+	font-size: 20px;
+}
+.inner-content-container{
+  display: table-cell;
+   width: 50%;
+    height: 50%;
+vertical-align: middle;
+
+  }
+.inner-content-header{
+    display: inline-block;
+}
+.inner-content-header h1{
+  font-weight: 700;
+  font-size: 45px;
+}
+.inner-content-header h1 span{
+    color:#ee3322;
+}
+.inner-content-button a{
+  color: white;
+}
+.inner-content-para p{
+  font-size: 25px;
+  margin-bottom: 20px;
+}
+.start-button-pom{
+  color: red;
+  border: 1px solid red;
+  background-color: red;
+  border-radius: 0.25rem;
+  font-size: 30px;
+  transition: 0.5s;
+}
+.start-button-pom:hover{
+  
+  text-decoration: none;
+
+}
+
+.watch-button-pom{
+  
+  border: 1px solid white;
+  background-color: transparent;
+  border-radius: 0.25rem;
+  font-size: 20px;
+  transition: 0.5s;
+}
+.watch-button-pom:hover{
+
+ 
+  text-decoration: none;
+}
+ 
+.hamburger{
+  color: white;
+}
+#myTopnav .icon{
+    display: none;
+}
+
+@media screen and (max-width: 1024px) {
+  #myTopnav .pom-guide a {display: none;}
+  #myTopnav button.icon{
+    float: right;
+    display: inline-block;
+    background-color: transparent;
+    transition: transform 500ms ease-in-out;
+    border: none;
+  }
+}
+
+
+html {
+    overflow: hidden;
+}
+
+.hidden{
+  display: none;
+}
+.show{
+  display: block;
+}
+
+.dropdown{
+  position: absolute;
+  top: 40px;
+  right: 16px;
+  text-align: right;
+  z-index: 999999;
+}
+
+/*dropdown menu*/
+
+select{
+  background-color: red;
+  color:white;
+}
