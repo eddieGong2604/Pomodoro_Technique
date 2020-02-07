@@ -1,5 +1,5 @@
 # Pomodoro_Technique
-**An (not yet completely) interactive Pomodoro clock for better time management, using HTML, CSS, Javascript**
+**An (not yet completely) interactive Pomodoro clock for better time management, using HTML, CSS and Vanilla Javascript**
 
 *About Pomodoro Technique*
 
